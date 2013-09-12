@@ -3,14 +3,8 @@
 Node.js IRC bot with dynamic module loading
 
 NPM modules required:
-
-- For the bare client:
 	- irc
 	- coffee
-- For specific modules:
-	- nodemw (Wikibot)
-	- mstranslator (Microsoft translator)
-	- request (Haskellbot)
 
 ## Writing modules for PlaceBot 2
 
