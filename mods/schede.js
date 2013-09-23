@@ -4,14 +4,14 @@ var macros = {};
 
 exports.init = function(client)
 {
-    fs.readFile('macros.txt', function (err, data) {
+    fs.readFile('schede.txt', function (err, data) {
       if (err) throw err;
       macros = JSON.parse(data);
     });
     
     client.on("message",function(nick, to, text, message){
         var msg = text.split(" ");
-        if (msg[0] == "!macro")
+        if (msg[0] == "!scheda")
         {
             if (msg.length != 2 || macros[msg[1].toLowerCase()] === undefined)
             {
@@ -22,17 +22,17 @@ exports.init = function(client)
             return;
         }
         
-        if (msg[0] == "!listmacro" || msg[0] == "!macrolist")
+        if (msg[0] == "!listschede" || msg[0] == "!schedelist")
         {
             var macrolist = Object.keys(macros).join(" / ");
             var outarr = macrolist.match(/(.{1,100}\s.{1,100})/g);
-            outarr[0] = "Macro disponibili: " + outarr[0];
+            outarr[0] = "Schede disponibili: " + outarr[0];
             for (var i = 0; i < outarr.length; i++)
             	client.say(nick,outarr[i]);
             return;
         }
         
-        if (msg[0] == "!addmacro")
+        if (msg[0] == "!addscheda")
         {
             var msg = text.split(" ");
             if (msg.length != 3) {
@@ -41,16 +41,16 @@ exports.init = function(client)
             macros[msg[1].toLowerCase()] = msg[2];
             var data = JSON.stringify(macros);
 
-            fs.writeFile("macros.txt",data,function(err) {
+            fs.writeFile("schede.txt",data,function(err) {
                 if(err) {
                     console.log(err);
                 } else {
-                    console.log("`Macros! New Macro Added!");
-                    client.say(to,"Added Macro \""+msg[1]+"\"");
+                    console.log("`Scheda! New Scheda Added!");
+                    client.say(to,"Scheda aggiunta \""+msg[1]+"\"");
                 }
             });
         }
     });
     
-    console.log("`Macros! loaded");
+    console.log("`Schede! loaded");
 };
