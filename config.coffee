@@ -2,9 +2,8 @@
 
 config =
 	server   : "irc.ponychat.net"
-	nickname : "twalot"
-	realname : "flotrshi sistah"
-	autojoin : [ "#testbass" ]
-	partylinePort : 3434
+	nickname : "JBot"
+	realname : "Jhyra waifu"
+	autojoin : [ "#brony.it" ]
 
 module.exports = config
