@@ -43,14 +43,14 @@ exports.init = function(client)
 
             fs.writeFile("macros.txt",data,function(err) {
                 if(err) {
-                    console.log(err);
+                    log(err);
                 } else {
-                    console.log("`Macros! New Macro Added!");
+                    log("`Macros! New Macro Added!");
                     client.say(to,"Added Macro \""+msg[1]+"\"");
                 }
             });
         }
     });
     
-    console.log("`Macros! loaded");
+    log("`Macros! loaded");
 };
