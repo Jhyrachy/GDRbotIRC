@@ -1,1 +1,1 @@
-coffee main.coffee
+screen -L -dmS jbot coffee main.coffee

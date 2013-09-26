@@ -1,0 +1,49 @@
+placebot2 - github.com/Hamcha/placebot2
+Connecting to irc.ponychat.net .. 
+Loading mods ..
+Partyline open! :34341
+`Vita e Battaglia! loaded
+`Help! loaded
+`Part&Join! loaded
+/LOGMAN/ has started loggin'!
+`Macros! loaded
+`Mirror! loaded
+`Op Module! loaded
+PLTK -PartyLine ToolKit- has been loaded!
+`Quotes! loaded
+`Schede! loaded
+`Turni! loaded
+All mods have been loaded!
+placebot2 - github.com/Hamcha/placebot2
+Connecting to irc.ponychat.net .. 
+Loading mods ..
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+  at errnoException (net.js:901:11)
+  at Server._listen2 (net.js:1039:14)
+  at listen (net.js:1061:10)
+  at Server.listen (net.js:1127:5)
+  at EventEmitter.Partyline.listen (/home/jhyrachy/bot/partyline.coffee:35:2, <js>:61:29)
+  at Object.<anonymous> (/home/jhyrachy/bot/main.coffee:18:10, <js>:28:13)
+  at Object.<anonymous> (/home/jhyrachy/bot/main.coffee:1:1, <js>:47:4)
+  at Module._compile (module.js:456:26)
+
+placebot2 - github.com/Hamcha/placebot2
+Connecting to irc.ponychat.net .. 
+Loading mods ..
+Partyline open! :34341
+`Vita e Battaglia! loaded
+`Help! loaded
+`Part&Join! loaded
+/LOGMAN/ has started loggin'!
+`Macros! loaded
+`Mirror! loaded
+`Op Module! loaded
+PLTK -PartyLine ToolKit- has been loaded!
+`Quotes! loaded
+`Schede! loaded
+`Turni! loaded
+All mods have been loaded!

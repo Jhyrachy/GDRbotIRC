@@ -5,5 +5,6 @@ config =
 	nickname : "JBot"
 	realname : "Jhyra waifu"
 	autojoin : [ "#brony.it" ]
+	partylinePort : 34341
 
 module.exports = config

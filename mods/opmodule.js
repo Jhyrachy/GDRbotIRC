@@ -61,5 +61,5 @@ exports.init = function (client)
         }
     });
 
-    console.log("`Op Module! loaded");
+    log("`Op Module! loaded");
 }

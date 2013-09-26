@@ -1,1 +1,1 @@
-{"jhy":140,"melkart":110,"lazychasm":85,"kaworu":76,"atris":72,"balac":175,"aeris":105,"plague":93}
+{"jhy":140,"melkart":110,"lazychasm":63,"kaworu":44,"atris":100,"balac":175,"aeris":100,"azzurra":100,"capslock":100,"k-bot":120,"tecnobeam":90,"slaveheart":120,"milou":100}

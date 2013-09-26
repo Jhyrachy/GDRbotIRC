@@ -11,5 +11,5 @@ exports.init = function (client)
                 client.say(nick, "Battaglia (\"!editpv [playername] {life}\" to register it \"!pv [nomeplayer]\" to get it. \"!b [playername] {damage/heal}\" to edit pv during battle and \"!pv reset\" to refresh pv to the original value)");
         }
     });
- console.log("`Help! loaded");
+ log("`Help! loaded");
 }

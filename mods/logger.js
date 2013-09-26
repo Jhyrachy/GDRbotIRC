@@ -30,7 +30,7 @@ exports.init = function(client){
     
     setInterval(createlog,3600000);
     
-    console.log("/LOGMAN/ has started loggin'!");
+    log("/LOGMAN/ has started loggin'!");
 };
 
 //Un saluto da Danjel :3

@@ -48,5 +48,5 @@ exports.init = function(client)
         }
     });
     
-    console.log("`Quotes! loaded");
+    log("`Quotes! loaded");
 };

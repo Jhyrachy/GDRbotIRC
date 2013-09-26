@@ -9,12 +9,18 @@ exports.init = function (client)
         switch (command.toString().toLowerCase())
         {
             case "!mirror":  // !mirror #sorgente #destinazione
-                if (parts.length > 0)
+                if (parts.length > 1)
                     var sorgente = parts.splice(0,1);
                     var destinazione = parts.splice(0,1);
-                    client.join(sorgente);
-                    client.join(destinazione);
+                    client.join(sorgente.toString());
+                    client.join(destinazione.toString());
+		              client.say(nick , "Mirroring Iniziato!");
                     links[sorgente] = destinazione;
+                break;
+
+            case "!stopmirror":
+                delete links[canale];
+                client.say(nick , "Mirroring Terminato!");
                 break;
         }
     });

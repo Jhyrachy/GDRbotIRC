@@ -9,6 +9,7 @@ global.createClient = () ->
 	# Connect to server
 	log "Connecting to " + config.server + " .. "
 	global.client = new irc.Client config.server, config.nickname, { channels: config.autojoin, realName: config.realname, userName: config.nickname }
+	global.client.setMaxListeners 50
 	# Setup Error handler
 	global.client.on "error", (e) -> log e
 

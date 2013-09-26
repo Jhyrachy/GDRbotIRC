@@ -19,5 +19,5 @@ exports.init = function (client)
         }
     });
 
-    console.log("`Turni! loaded");
+    log("`Turni! loaded");
 }

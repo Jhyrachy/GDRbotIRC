@@ -1,5 +1,4 @@
-# PlaceBot 2 - GDR Modded Version
-# Original Placebot 2 repo: https://github.com/Hamcha/placebot2
+# PlaceBot 2
 
 Node.js IRC bot with dynamic module loading
 
@@ -15,10 +14,3 @@ Two javascript modules (which are quite similar) are included so that you can ta
 
 - Macro (!macro / !addmacro)
 - Quotes (!quote / !addquote)
-
-On my own i added:
-- Join & part ("!join #channel" and "!part #channel")
-- Turni ("!turni [msg]" to register a message and "!turni" for receive the messagge in query)
-- Schede ("!addscheda [playername] {link}" to add a new one and "!scheda [playername]" to get it)
-- Battaglia ("!editpv [playername] {life}" to register it "!pv [nomeplayer]" to get it. "!b [playername] {damage/heal}" to edit pv during battle and "!pv reset" to refresh pv to the original value)
-- Help ("!comandi" to list and explain all the previus commands)

@@ -52,5 +52,5 @@ exports.init = function(client)
         }
     });
     
-    console.log("`Macros! loaded");
+    log("`Macros! loaded");
 };

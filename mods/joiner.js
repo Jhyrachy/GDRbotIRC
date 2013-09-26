@@ -23,5 +23,5 @@ exports.init = function (client)
         }
     });
 
-    console.log("`Part&Join! loaded");
+    log("`Part&Join! loaded");
 }

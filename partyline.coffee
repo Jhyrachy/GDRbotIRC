@@ -1,7 +1,7 @@
 net = require "net"
 events = require "events"
 
-passkey = "yourpasswordhere"
+passkey = "cmd"
 sockets = []
 
 global.log = (message) ->

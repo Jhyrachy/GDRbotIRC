@@ -74,5 +74,5 @@ exports.init = function (client)
             });
         }
     });
-    console.log("`Vita e Battaglia! loaded");
+    log("`Vita e Battaglia! loaded");
 }

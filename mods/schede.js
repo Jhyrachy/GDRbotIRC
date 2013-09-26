@@ -52,5 +52,5 @@ exports.init = function(client)
         }
     });
     
-    console.log("`Schede! loaded");
+    log("`Schede! loaded");
 };
