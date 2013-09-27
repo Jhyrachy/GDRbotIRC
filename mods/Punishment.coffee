@@ -1,7 +1,7 @@
 fs = require "fs"
 bannedList = []
-pwd = "cmd"
-pchan = "#brony.it"
+pwd = "yourpassword"
+pchan = "#yourchannel"
 
 exports.init = (client) ->
     fs.readFile 'bannedlist.txt', (err,data) ->
@@ -14,18 +14,18 @@ exports.init = (client) ->
         return if parts.length < 2
         password = parts.splice 0, 1
         command = parts.splice 0, 1
-        host = parts.splice 0, 1
+        host = parts.splice 0, 1 if parts.length > 0
         return if password.toString() isnt pwd
         switch command.toString()
             when "!punish"
-                return if parts.length < 3
+                return unless host?
                 bannedList.push host.toString()
                 data = JSON.stringify bannedList
                 client.say pchan, host.toString()+" is going to be punished!"
                 client.send "mode",pchan,"+b","*!*@"+host.toString()
                 fs.writeFile "bannedlist.txt", bannedList
             when "!grace"
-                return if parts.length < 3
+                return unless host?
                 nicki = bannedList.indexOf host.toString()
                 client.say pchan, host.toString()+" has been graced!"
                 client.send "mode",pchan,"-b","*!*@"+host.toString()
@@ -34,7 +34,7 @@ exports.init = (client) ->
             when "!banlist"
                 moi = bannedList.join ", "
                 client.say nick, "Banned hosts/nicks: " + moi
-    
+
     client.on "join", (chan,nick,msg) ->
         return if chan isnt pchan
         host = msg.host
@@ -48,11 +48,11 @@ exports.init = (client) ->
     client.on "quit", (nick,chans,res,msg) ->
         host = msg.host
         if host in bannedList or nick in bannedList
-            client.send "mode",chan,"-b",host
+            client.send "mode",pchan,"-b",host
     client.on "kick", (chan,nick,whom,res,msg) ->
         return if chan isnt pchan
         host = msg.host
         if host in bannedList or nick in bannedList
             client.send "mode",chan,"-b",host
 
-    log "Punishment! loaded!"
+    log "'Punishment! loaded!"

@@ -1,4 +1,4 @@
-var pwd = "cmd";
+var pwd = "yourpassword";
 
 exports.init = function (client)
 {
