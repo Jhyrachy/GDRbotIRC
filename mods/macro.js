@@ -11,7 +11,7 @@ exports.init = function(client)
     
     client.on("message",function(nick, to, text, message){
         var msg = text.split(" ");
-        if (msg[0] == "!macro")
+        if (msg[0] == "!mcr")
         {
             if (msg.length != 2 || macros[msg[1].toLowerCase()] === undefined)
             {
